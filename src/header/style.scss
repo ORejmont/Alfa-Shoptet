@@ -16,6 +16,14 @@
 @use 'Type-page';
 @use 'Addons';
 
+.sr-only {
+  display: none;
+}
+
+.required-asterisk.required-asterisk--before {
+  color: red !important;
+}
+
 .custom-style-panel {
   position: fixed;
   right: 20px;

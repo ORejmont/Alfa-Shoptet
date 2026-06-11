@@ -71,6 +71,7 @@
       cursor: pointer;
       position: absolute;
       right: 0;
+      border: 0;
 
       background-color: abs.$color-black;
       display: flex;
@@ -98,21 +99,3 @@
     }
   }
 }
-
-// .dark-header-background {
-//   .site-msg {
-//     background-color: #fff;
-
-//     .text {
-//       color: abs.$color-primary;
-//     }
-
-//     .js-close-information-msg {
-
-//       &::before,
-//       &::after {
-//         background-color: abs.$color-primary;
-//       }
-//     }
-//   }
-// }

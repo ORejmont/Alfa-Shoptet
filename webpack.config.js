@@ -19,17 +19,24 @@ const extensionsFilenames = {
 const getEntries = (extension, isProduction) => {
   const entries = {};
   const folders = ["footer", "header", "index"];
+
   folders.forEach((folder) => {
-    const files = glob.sync(`./src/${folder}/**/*.${extension}`);
+    const files =
+      extension === "scss"
+        ? glob.sync(`./src/${folder}/style.scss`)
+        : glob.sync(`./src/${folder}/**/*.${extension}`);
+
     if (files.length > 0) {
       const foundExtension = files[0].split(".").pop();
       const filename = extensionsFilenames[foundExtension];
       const minExtension = isProduction ? ".min" : "";
+
       entries[`${filename}.${folder}${minExtension}`] = files.map(
-        (str) => "./" + str
+        (str) => "./" + str,
       );
     }
   });
+
   return entries;
 };
 

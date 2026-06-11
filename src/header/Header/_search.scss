@@ -70,21 +70,10 @@
         font-size: 20px;
         color: abs.$color-black;
         font-weight: 400;
-
-        // @media (min-width: 768px) {
-        //   color: #616171;
-        //   transition: color .3s ease-in-out;
-        // }
       }
 
       &:hover {
         background-color: abs.$color-nav-element-background-hover;
-
-        // @media (min-width: 768px) {
-        //   &::before {
-        //     color: abs.$color-black;
-        //   }
-        // }
       }
     }
 

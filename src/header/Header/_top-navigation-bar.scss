@@ -35,12 +35,6 @@
     }
   }
 
-  // margin-bottom: 88px + 51px;
-
-  // +#header {
-  //   margin-top: -88px - 51px;
-  // }
-
   @media (max-width: 767px) {
     margin-top: 0;
 
@@ -104,61 +98,9 @@
 
       .top-nav-button-login,
       .top-nav-button-account {
-        // font-size: 0;
-        // line-height: 0;
-        // width: 48px;
-        // height: 48px;
-        // border-radius: 24px;
-        // border: 2px solid transparent;
-
-        // background-color: abs.$color-nav-element-background;
-
-        // position: absolute;
-        // bottom: -48px - 20px;
-        // right: 130px + 10px + 10px;
-
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-
-        // text-decoration: none;
-
-        // transition-duration: .3s;
-
         @media (min-width: 768px) {
           display: none;
         }
-
-        // &::before {
-        //   content: '\f114';
-        //   font-family: 'alfa';
-        //   font-size: 22px;
-        //   color: abs.$color-black;
-        //   font-weight: 400;
-
-        //   // @media (min-width: 768px) {
-        //   //   color: #616171;
-        //   //   transition: color .3s ease-in-out;
-        //   // }
-
-        //   @media (max-width: 767px) {
-        //     font-size: 19px;
-        //   }
-        // }
-
-        // &:hover {
-        //   background-color: abs.$color-nav-element-background-hover;
-
-        //   // @media (min-width: 768px) {
-        //   //   &::before {
-        //   //     color: abs.$color-black;
-        //   //   }
-        //   // }
-
-        //   // &::before {
-        //   //   color: #fff;
-        //   // }
-        // }
       }
     }
 
@@ -200,19 +142,6 @@
           margin-right: 4px;
         }
 
-        // &::before {
-        //   content: '';
-        //   position: absolute;
-        //   left: -5px;
-        //   top: 50%;
-        //   transform: translate(-50%, -50%);
-        //   width: 4px;
-        //   height: 4px;
-        //   border-radius: 50%;
-        //   background-color: abs.$color-grey;
-        //   display: block;
-        // }
-
         &::after {
           content: '\f10c';
           font-family: "alfa";
@@ -246,18 +175,8 @@
 
         transition-duration: .3s;
 
-        // padding: 5px 0;
-
         >li {
           width: 100%;
-
-          // &:first-of-type>a {
-          //   padding-top: 10px;
-          // }
-
-          // &:last-of-type>a {
-          //   padding-bottom: 10px;
-          // }
 
           a {
             display: block;

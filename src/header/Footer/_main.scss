@@ -1,6 +1,6 @@
 @use "../Abstracts" as abs;
 
-/* Hlasování */
+/* Voting */
 ul.poll {
   margin-bottom: 10px;
 
@@ -38,9 +38,9 @@ ul.poll {
   }
 }
 
-/* Hlasování */
+/* Voting */
 
-/* Kontakt box */
+/* Contact box */
 #footer .custom-footer__contact,
 .sidebar .box-contact,
 .sidebar-in-cart .contact-box,
@@ -167,7 +167,7 @@ ul.poll {
   }
 }
 
-/* Kontakt box */
+/* Contact box */
 
 /* Newsletter */
 #footer .custom-footer__newsletter,
@@ -366,7 +366,7 @@ ul.poll {
 
 /* Login */
 
-/* Top 10 produktů */
+/* Top 10 products */
 #footer .custom-footer__topProducts,
 .sidebar .box-topProducts {
   .top-products {
@@ -471,9 +471,9 @@ ul.poll {
   }
 }
 
-/* Top 10 produktů */
+/* Top 10 products */
 
-/* Poslední hodnocení produktu */
+/* Last product rating */
 .sidebar .box-productRating,
 #footer .custom-footer__productRating {
   a {
@@ -570,7 +570,7 @@ ul.poll {
   }
 }
 
-/* Poslední hodnocení produktu */
+/* Last product rating */
 
 /* Search */
 .sidebar .box-search,
@@ -621,7 +621,7 @@ ul.poll {
 
 /* Cart box */
 
-/* Články */
+/* Posts */
 .sidebar .news-item-widget {
   margin-bottom: 15px;
 
@@ -638,7 +638,7 @@ ul.poll {
   }
 }
 
-/* Články */
+/* Posts */
 
 /* Instagram */
 .sidebar .box-instagram {
@@ -720,9 +720,6 @@ ul.poll {
         text-align: left;
         border: 2px solid abs.$color-primary;
         transition-duration: 0.3s;
-        // position: relative;
-        // z-index: 1;
-        // overflow: hidden;
 
         &::before {
           content: "\f116";
@@ -734,28 +731,10 @@ ul.poll {
           transition: color 0.3s ease-in-out;
         }
 
-        // &::after {
-        //   content: "";
-        //   height: 100%;
-        //   width: 0;
-        //   position: absolute;
-        //   left: 0;
-        //   top: 0;
-        //   background-color: abs.$color-black;
-        //   border-radius: 150px;
-        //   z-index: -1;
-        //   transition-duration: 0.3s;
-        //   transition-timing-function: ease-out;
-        // }
-
         &:hover {
           color: #fff;
           background-color: abs.$color-secondary;
           transition: background-color ease 0.3s;
-
-          // &::after {
-          //   width: 100%;
-          // }
 
           &::before {
             color: #fff;

@@ -95,10 +95,6 @@
         justify-content: flex-end;
       }
 
-      &:not(.is-black):not(.is-white):not(.has-background) {
-        // display: none;
-      }
-
       &.has-background {
         background-color: #fff;
         border-radius: abs.$border-radius;
@@ -354,7 +350,7 @@
   }
 }
 
-// Obecná třída pro obrázky
+// Generic image class
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
   display: block;

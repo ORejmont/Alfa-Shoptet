@@ -26,12 +26,39 @@
     padding: 20px;
 
     .welcome {
-      >h1 {
+
+      >h1,
+      .h1 {
         margin-bottom: 0;
+
+        font-size: 32px;
+        color: abs.$color-black;
+        line-height: 1.1;
+        font-weight: 600;
+        font-family: abs.$poppins;
+
+        @media (max-width: 767px) {
+          font-size: 26px;
+        }
 
         +div {
           margin-top: 10px;
         }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 20px;
+      }
+
+      ul,
+      ol {
+        margin-top: 15px;
+        margin-bottom: 15px;
       }
     }
 

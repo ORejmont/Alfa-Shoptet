@@ -7,10 +7,6 @@
   flex-wrap: wrap;
   align-items: stretch;
 
-  // @media (max-width: 1199px) {
-  //   margin: calc(abs.$large-gap / 2) calc(abs.$small-gap-12 / -2);
-  // }
-
   @media (max-width: 991px) {
     margin-top: abs.$mobile-gap + 10px - 7.5px;
   }

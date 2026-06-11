@@ -1,11 +1,6 @@
 @use "../Abstracts" as abs;
 
 .admin-bar {
-  // position: fixed;
-  // bottom: 0;
-  // width: 100%;
-  // left: 0;
-
   display: none; // Remove
   height: 0;
   width: 0;
@@ -134,7 +129,7 @@
   }
 }
 
-/* Admin bar dolů na stránku */
+/* Admin bar stick to bottom */
 @media (min-width: 992px) {
   .admin-bar {
     position: fixed;

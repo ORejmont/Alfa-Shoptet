@@ -154,11 +154,15 @@
 
       .basic-description {
         @include abs.background;
-        padding: 15px;
+        padding: 30px;
         border-radius: abs.$border-radius;
         flex: 1;
         line-height: 1.4;
         color: abs.$color-grey;
+
+        @media (max-width: 479px) {
+          padding: 20px;
+        }
 
         h1,
         h2,
@@ -370,12 +374,17 @@
       text-decoration: none;
     }
 
-    p[data-testid="textCommentNotice"]+#ratingWrapper>.rate-wrap {
+    >p+#ratingWrapper>.rate-wrap {
       display: none;
 
       +#rate-form {
         margin-left: 0;
       }
+    }
+
+    .required-asterisk.required-asterisk--before {
+      display: block;
+      margin-bottom: 10px;
     }
   }
 
@@ -384,7 +393,8 @@
     @include abs.background;
     border-radius: abs.$border-radius;
 
-    p[data-testid="textCommentNotice"] {
+    p[data-testid="textCommentNotice"],
+    >p {
       margin-bottom: 15px;
     }
 

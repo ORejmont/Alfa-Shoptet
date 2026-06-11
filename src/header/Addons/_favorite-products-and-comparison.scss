@@ -63,7 +63,6 @@ body .product .dkLabComparerProductDiv.onlyIcon+.dkLabFavouriteProductDiv.onlyIc
 
 @media (max-width: 767px) {
 
-  // Odebral jsem z body :not(.mobile-header-version-0) EDIT
   body.template-11 #header .navigation-buttons #dkLabFavHeaderWrapper,
   body.template-11 #header #dkLabComparerHeaderWrappper {
     transform: none !important;

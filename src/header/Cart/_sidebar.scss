@@ -30,7 +30,6 @@
   }
 
   .price-wrapper {
-    // margin-top: 10px;
     background-color: #f5f6f8;
     border-radius: abs.$border-radius;
     padding: 15px 20px;
@@ -225,7 +224,6 @@
         width: auto;
 
         &:hover {
-          // background-color: abs.$color-body-background;
           text-decoration: underline;
         }
       }

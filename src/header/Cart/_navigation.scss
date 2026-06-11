@@ -1,7 +1,6 @@
 @use "../Abstracts" as abs;
 
 .cart-header {
-  // counter-reset: step;
   padding: 0;
   display: flex;
   align-items: stretch;
@@ -16,10 +15,6 @@
 
   border: 2px solid abs.$color-body-background;
   border-radius: abs.$border-radius;
-
-  // &.step-0 {
-  //   margin-bottom: 10px;
-  // }
 
   &.step-1 {
     @media (max-width: 767px) {
@@ -157,31 +152,4 @@
       }
     }
   }
-
-  // @media (max-width: 320px) {
-  //   margin: 0;
-  //   margin-bottom: 10px;
-  //   width: 100%;
-
-  //   .step {
-  //     width: 100%;
-  //     margin: 0;
-  //     margin-bottom: 5px;
-
-  //     &:last-of-type {
-  //       margin-bottom: 0;
-  //     }
-
-  //     >* {
-  //       justify-content: center;
-  //       padding: 10px;
-  //       font-size: 15px;
-
-  //       &::before {
-  //         width: 26px;
-  //         height: 26px;
-  //       }
-  //     }
-  //   }
-  // }
 }

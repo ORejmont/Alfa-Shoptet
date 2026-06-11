@@ -33,14 +33,6 @@
       }
     }
   }
-
-  // #header {
-
-  //   +.breadcrumbs-wrapper,
-  //   +#content-wrapper {
-  //     padding-top: 124px + abs.$small-gap;
-  //   }
-  // }
 }
 
 .ordering-process {
@@ -52,14 +44,11 @@
 }
 
 #header {
-  // background-color: #fff; // abs.$color-header-background;
   width: 100%;
   position: sticky;
   top: 0;
 
   z-index: 9;
-
-  // position: relative;
 
   li {
     margin-bottom: 0;
@@ -73,14 +62,6 @@
   &.is-sticky-enabled {
     position: sticky;
   }
-
-  // height: 124px;
-
-  // background-color: #fff;
-
-  // margin-bottom: calc(abs.$small-gap + 36px);
-
-  // box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .02);
 
   @media (min-width: 768px) {
     transition: height .3s;
@@ -97,18 +78,6 @@
     height: 100%;
     position: relative;
   }
-
-  // &::before {
-  //   content: "";
-  //   background-color: #fff;
-  //   height: 124px;
-  //   width: 100%;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   transition-duration: .3s;
-  //   transition-timing-function: ease-out;
-  // }
 
   &::before {
     content: "";
@@ -274,27 +243,12 @@
     position: absolute;
     bottom: -36px;
     width: 100%;
-    // transform: translateY(100%);
     transition-duration: .3s;
     transition-timing-function: ease-out;
 
-    // .navigation-in {
-    //   // background-color: #fff;
-    //   position: relative;
-
-    //   &::before {
-    //     content: '';
-    //     display: block;
-    //     width: calc(100% + 30px);
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: -15px;
-    //     height: calc(100% + 76px);
-    //     // background-color: #fff;
-    //   }
-    // }
-
     @media (min-width: 768px) {
+      padding-right: 25px;
+
       .navigationActions {
         display: none;
       }
@@ -308,7 +262,6 @@
       >li {
         &:first-of-type {
           >a {
-            // padding-left: 0;
             margin-left: -15px;
           }
         }
@@ -319,7 +272,6 @@
         }
 
         >ul {
-          // display: none;
           transform: translateY(-100%);
           pointer-events: none;
 
@@ -425,7 +377,6 @@
 
             >div {
               flex: 1;
-              // height: 100%;
               position: relative;
               z-index: 0;
               display: flex;
@@ -574,10 +525,10 @@
 
           &:hover::before {
             transform: scaleX(1);
-            transform-origin: left; // animace zleva doprava
+            transform-origin: left; // animation from left to right
           }
 
-          // Animace zprava doleva při unhover:
+          // Animation from left to right while unhover:
           &:not(:hover)::before {
             transform-origin: right;
           }
@@ -626,8 +577,6 @@
 
     $menu-helper-height: 48px;
 
-    // transform: translateY(100%);
-
     visibility: hidden;
     z-index: -1;
     cursor: pointer;
@@ -674,16 +623,6 @@
 
       padding: 5px;
 
-      // >li {
-      //   &:first-of-type>a {
-      //     padding-top: 10px;
-      //   }
-
-      //   &:last-of-type>a {
-      //     padding-bottom: 10px;
-      //   }
-      // }
-
       li {
         width: 100%;
 
@@ -703,24 +642,6 @@
             font-size: 0;
             line-height: 0;
 
-            // >div {
-            //   >ul {
-            //     position: relative;
-
-            //     &::before {
-            //       content: "";
-            //       position: absolute;
-            //       top: -14px;
-            //       transform: translateY(-0.5px);
-            //       left: 14px;
-            //       width: 1px;
-            //       z-index: 1;
-            //       height: calc(100% + 1px);
-            //       background-color: #000000;
-            //     }
-            //   }
-            // }
-
             &:not(.has-third-level),
             &.has-third-level>div>ul>li,
             &.has-third-level>div>a {
@@ -739,12 +660,10 @@
             }
 
             &.has-third-level>div>a {
-              // padding-left: 15px + 10px;
               padding: 5px;
               padding-left: 26px;
 
               &::before {
-                // content: none;
                 width: 6px;
                 transform: none;
                 left: 15px;
@@ -904,10 +823,6 @@
           }
         }
       }
-
-      // >li:not(:first-of-type).exp-custom {
-      //   border-top: 2px solid abs.$color-nav-element-background-hover;
-      // }
 
       >li:last-of-type>.menu-level-2 {
         border-bottom: 0;
