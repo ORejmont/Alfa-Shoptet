@@ -393,7 +393,13 @@
     @include abs.background;
     border-radius: abs.$border-radius;
 
-    p[data-testid="textCommentNotice"],
+    .required-asterisk.required-asterisk--before {
+      margin-bottom: 5px;
+      display: block;
+      font-size: 14px;
+    }
+
+    .discussionContainer>p,
     >p {
       margin-bottom: 15px;
     }

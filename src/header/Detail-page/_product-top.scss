@@ -344,18 +344,6 @@
 
       .p-detail-info {
         margin-bottom: 5px;
-
-        a[data-testid="productCardBrandName"] {
-          font-size: 14px;
-          margin-top: 3px;
-          color: abs.$color-grey;
-          text-decoration: none;
-
-          &:hover {
-            color: abs.$color-primary;
-            text-decoration: underline;
-          }
-        }
       }
 
       .stars-wrapper {
@@ -627,7 +615,6 @@
         font-size: 16px;
       }
 
-      p[data-testid="productCardDescr"],
       >p {
         margin-top: -15px + 3px;
         margin-bottom: 15px;

@@ -24,7 +24,7 @@ function modifyProductTop() {
       header.insertAdjacentElement("afterend", detailInfo);
     }
 
-    // Move .p-short-description after .p-final-price-wrapper
+    // Move .p-short-description before .p-final-price-wrapper
     if (shortDescription && finalPriceWrapper) {
       finalPriceWrapper.insertAdjacentElement("beforebegin", shortDescription);
     }

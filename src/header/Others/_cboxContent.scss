@@ -1,8 +1,8 @@
 @use "../Abstracts" as abs;
 
 .shipping-options-popup {
-  container-type: inline-size; // totéž co container: inline-size
-  container-name: shipping; // volitelné, ale pěkné
+  container-type: inline-size; // same as container: inline-size
+  container-name: shipping;
 }
 
 @container shipping (width > 27em) {
@@ -383,15 +383,9 @@ body {
     input[type=radio]+label {
       display: inline-block;
       line-height: 20px;
-      // margin-right: 15px;
-      // padding-left: 0;
       position: relative;
     }
   }
-
-  // .cookiesSetting__item .cookiesSetting__item__status .cookiesSetting__item__state {
-  //   padding-left: 40px;
-  // }
 
   .cookiesSetting__bottom {
     text-align: center;

@@ -278,7 +278,7 @@
       display: block;
     }
 
-    span[data-testid="cartItemDiscount"] {
+    span {
       font-weight: 700;
       display: block;
     }
@@ -292,7 +292,6 @@
     font-size: 16px;
     color: abs.$color-black;
 
-    span[data-testid="readonlyCartItemAmount"],
     .down-payment-name {
       border-radius: 19px;
       background-color: #fff;

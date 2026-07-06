@@ -53,6 +53,18 @@ ul.poll {
 
   li {
     span {
+      &.facebook a {
+        font-size: 0;
+        line-height: 0;
+
+        &::before,
+        &::after {
+          content: 'Facebook';
+          font-size: 15px;
+          line-height: 1.2;
+        }
+      }
+
       a {
         display: inline-block;
         position: relative;

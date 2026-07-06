@@ -41,7 +41,7 @@ body .advanced-order {
   }
 
   .ao-name,
-  .h2[data-testid="textPopupProductName"],
+  >.h2,
   .advanced-order-suggestion {
     font-size: 24px;
     font-weight: 600;
