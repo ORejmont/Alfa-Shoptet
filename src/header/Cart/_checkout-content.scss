@@ -51,12 +51,7 @@
 
       &:checked+label {
         background-color: transparent;
-        // color: #fff;
         z-index: 1;
-
-        // .payment-shipping-price.for-free {
-        //   color: #fff;
-        // }
 
         &:hover {
           background-color: transparent;
@@ -82,9 +77,6 @@
 
         &::after {
           content: '';
-          // border-color: abs.$color-primary;
-          // outline-color: #fff;
-          // background-color: #fff;
         }
       }
 
@@ -264,7 +256,6 @@
   }
 
   .co-box {
-    // margin-bottom: 40px;
     padding: 20px;
     padding-bottom: 0;
 

@@ -70,21 +70,10 @@
         font-size: 20px;
         color: abs.$color-black;
         font-weight: 400;
-
-        // @media (min-width: 768px) {
-        //   color: #616171;
-        //   transition: color .3s ease-in-out;
-        // }
       }
 
       &:hover {
         background-color: abs.$color-nav-element-background-hover;
-
-        // @media (min-width: 768px) {
-        //   &::before {
-        //     color: abs.$color-black;
-        //   }
-        // }
       }
     }
 
@@ -96,7 +85,7 @@
       top: calc(100% - 1px);
       left: 0;
       width: 100%;
-      max-height: calc(100vh - 32px - 68px - 100px); // Edit pro mobilní verzi
+      max-height: calc(100vh - 32px - 68px - 100px); // Edit for mobile version
       background-color: #fff;
 
       overflow-y: auto;
@@ -108,7 +97,7 @@
       @media (max-width: 767px) {
         border-color: abs.$color-nav-element-background-hover;
         border-width: 1px;
-        max-height: calc(100vh - 32px - 68px - 60px - 50px - 100px); // Edit pro mobilní verzi
+        max-height: calc(100vh - 32px - 68px - 60px - 50px - 100px); // Edit for mobile version
       }
 
       .search-whisperer-documents,

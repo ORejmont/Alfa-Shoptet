@@ -1,14 +1,6 @@
 @use "../Abstracts" as abs;
 
 body .advanced-order {
-
-  // .ao-image,
-  // .ao-price,
-  // .ao-quantity,
-  // .ao-availability {
-  //   display: none;
-  // }
-
   .btn.p-all {
     display: none;
   }
@@ -49,7 +41,7 @@ body .advanced-order {
   }
 
   .ao-name,
-  .h2[data-testid="textPopupProductName"],
+  >.h2,
   .advanced-order-suggestion {
     font-size: 24px;
     font-weight: 600;
@@ -128,10 +120,6 @@ body .advanced-order {
       border: 2px solid abs.$color-body-background;
       margin: 0;
       margin-bottom: 7px;
-
-      // @media (max-width: 767px) {
-      //   width: calc(100% / 2 - 10px);
-      // }
 
       &:last-of-type {
         margin-bottom: 0;

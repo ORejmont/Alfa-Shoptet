@@ -61,8 +61,6 @@
 
   a {
     text-decoration: none;
-    // background-color: #e7eaf1; // abs.$color-nav-element-background-hover; // #e1e5ed;
-    // border-radius: 50px;
     padding: 3px 5px;
     transition-duration: .3s;
 
@@ -72,8 +70,6 @@
     }
 
     &:hover {
-      // background-color: abs.$color-primary;
-
       span {
         color: abs.$color-secondary;
         text-decoration: underline;

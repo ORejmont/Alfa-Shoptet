@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: abs.$nunito;
   font-family: abs.$roboto;
   color: abs.$color-black;
   font-size: 16px;
@@ -123,7 +123,7 @@ ul li {
     width: 4px;
     height: 4px;
     border-radius: 5px;
-    background-color: abs.$color-black;
+    background-color: currentColor;
   }
 
   &:last-of-type {
@@ -340,10 +340,10 @@ a.btn {
   text-align: center;
 }
 
-/* Formuláře checkboxy atp. */
+/* Form checkboxs etc. */
 input[type="checkbox"],
 input[type="radio"] {
-  appearance: none; // odstraní defaultní styl prohlížeče
+  appearance: none; // removes default styles
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 18px;
@@ -362,9 +362,6 @@ input[type="radio"] {
   margin-top: -1px;
 
   &:checked {
-    // background-color: abs.$color-primary;
-    // border-color: abs.$color-primary;
-
     &::after {
       content: "";
       position: absolute;
@@ -590,7 +587,6 @@ textarea {
     font-size: 16px;
     padding: 9px 34px;
     width: 100%; // Edit
-    // max-width: 95px;
 
     -moz-appearance: textfield;
 
@@ -602,7 +598,7 @@ textarea {
   }
 }
 
-/* Formuláře checkboxy atp. */
+/* Form checkboxs etc. */
 
 .search-whisperer li {
   margin-bottom: 0;
@@ -622,11 +618,11 @@ img {
 sub,
 sup {
   font-size: smaller;
-  /* typicky 75% */
+  /* typically 75% */
   line-height: normal;
   position: relative;
   vertical-align: sub;
-  /* nebo super */
+  /* or super */
 }
 
 code {
@@ -735,12 +731,12 @@ code {
 .mobile {
   .p-image-wrapper {
     a.p-main-image.cloud-zoom {
-      pointer-events: none; // zablokuje kliknutí a zoom
+      pointer-events: none; // blocks clicks and zoom (interaction)
     }
 
     .cloud-zoom-lens,
     .cloud-zoom-big {
-      display: none !important; // skryje overlay zoomu
+      display: none !important; // hides zoom overlay
     }
   }
 }

@@ -30,7 +30,6 @@
   }
 
   .price-wrapper {
-    // margin-top: 10px;
     background-color: #f5f6f8;
     border-radius: abs.$border-radius;
     padding: 15px 20px;
@@ -81,6 +80,15 @@
 
   #shipping-billing-summary {
     margin-top: 8px;
+
+    .recapitulation-shipping-billing-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      flex: 1;
+    }
   }
 
   .recapitulation-single,
@@ -90,10 +98,6 @@
 
     strong {
       font-weight: 400;
-    }
-
-    span[data-testid="recapItemPrice"] {
-      padding-right: 4px;
     }
   }
 
@@ -109,7 +113,7 @@
     font-size: 15px;
 
     .recapitulation-shipping-billing-info,
-    div[data-testid="recapItemTotalPrice"] {
+    div:last-child {
       text-align: right;
       padding-left: 7px;
     }
@@ -225,7 +229,6 @@
         width: auto;
 
         &:hover {
-          // background-color: abs.$color-body-background;
           text-decoration: underline;
         }
       }

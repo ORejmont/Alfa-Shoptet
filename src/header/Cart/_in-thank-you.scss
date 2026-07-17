@@ -5,7 +5,7 @@
   margin-bottom: 0;
 }
 
-.cart-table[data-testid="recapTable"] {
+.recapitulation-wrapper .cart-table {
   tbody {
     display: flex;
     align-items: stretch;
@@ -13,7 +13,7 @@
     margin: -5px;
     width: calc(100% + 10px);
 
-    tr[data-testid="recapItem"] {
+    tr {
       position: relative;
       margin: 5px;
       padding: 10px;
@@ -111,7 +111,7 @@
   }
 }
 
-.recapitulation-wrapper:not([data-testid="recapTable"]) {
+.recapitulation-wrapper:last-of-type {
   text-align: center;
   display: flex;
   flex-direction: column;

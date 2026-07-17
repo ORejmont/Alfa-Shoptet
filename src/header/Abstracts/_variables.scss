@@ -50,8 +50,9 @@ $box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 /* Shadows */
 
 /* Fonts */
-$poppins: "Poppins", sans-serif;
-$roboto: "Roboto", sans-serif;
+$nunito: 'Nunito Sans', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$roboto: 'Roboto', sans-serif;
 /* Fonts */
 
 /* Backgrounds */
@@ -67,3 +68,11 @@ $roboto: "Roboto", sans-serif;
 }
 
 /* Backgrounds */
+
+/* Breakpoints */
+$bp-480: 480px;
+$bp-768: 768px;
+$bp-992: 992px;
+$bp-1200: 1200px;
+$bp-1440: 1440px;
+/* Breakpoints */

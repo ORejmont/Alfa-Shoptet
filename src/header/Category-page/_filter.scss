@@ -168,7 +168,6 @@
     #filters {
       display: none;
       border-radius: abs.$border-radius;
-      // background-color: abs.$color-body-background;
 
       @include abs.background;
       border-radius: abs.$border-radius;
@@ -437,7 +436,7 @@
             line-height: 1.2;
             padding: 12px 20px;
             text-align: center;
-            font-family: "Poppins", sans-serif;
+            font-family: abs.$poppins;
             text-decoration: none;
             transition-duration: 0.3s;
 
@@ -504,6 +503,9 @@
           padding: 6px;
           width: 34px;
           height: 34px;
+          background-color: transparent;
+          border: 0;
+          border-radius: 0;
 
           &::before {
             content: '\f107';

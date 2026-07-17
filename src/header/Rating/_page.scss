@@ -139,11 +139,6 @@ $rate-space: 50px;
       display: flex;
       font-weight: 600;
       margin-right: 10px;
-
-      // &::after {
-      //   content: '/5';
-      //   color: abs.$color-grey;
-      // }
     }
 
     .rate-star-wrap {
@@ -224,30 +219,6 @@ $rate-space: 50px;
   }
 
   #rate-form {
-    // &.js-hidden {
-    //   max-height: 0;
-    //   max-width: 0;
-    //   overflow: hidden;
-    //   position: absolute;
-    //   transform: scaleY(0) scaleX(0);
-    //   transform-origin: center;
-    //   transition: none;
-    //   visibility: hidden;
-    //   opacity: 0;
-
-    //   &.visible {
-    //     max-height: none;
-    //     max-width: none;
-    //     overflow: visible;
-    //     position: inherit;
-    //     transform: scaleY(1) scaleX(1);
-    //     transform-origin: center;
-    //     transition: opacity .3s ease-out;
-    //     visibility: visible;
-    //     opacity: 1;
-    //   }
-    // }
-
     &.js-hidden {
       max-height: none;
       max-width: none;
@@ -280,10 +251,6 @@ $rate-space: 50px;
     padding: 15px;
     border-radius: abs.$border-radius;
     @include abs.background;
-
-    // @media (max-width: 991px) {
-    //   width: calc(100% - 12px);
-    // }
   }
 
   .admin-response {
@@ -329,6 +296,7 @@ $rate-space: 50px;
     color: #fff;
     font-size: 20px;
     font-weight: 400;
+    background-color: var(--avatar-bg);
   }
 }
 

@@ -33,7 +33,6 @@ body::after {
 }
 
 .cart-widget {
-  // display: none;
   position: fixed;
   right: 0;
   top: 0;
@@ -78,6 +77,9 @@ body::after {
     .cart-window-close {
       cursor: pointer;
       margin-left: 10px;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
 
       &::before {
         content: "\f107";
@@ -209,18 +211,12 @@ body::after {
 
         border-radius: abs.$border-radius;
 
-        // transition: background-color .3s ease-in-out;
-
         border: 2px solid abs.$color-nav-element-background;
 
         @media (max-width: 479px) {
           margin-left: 15px;
           margin-right: 15px;
         }
-
-        // &:hover {
-        //   background-color: abs.$color-nav-element-background;
-        // }
 
         &:last-of-type {
           margin-bottom: 0;
@@ -245,7 +241,7 @@ body::after {
             display: flex;
           }
 
-          &:hover+.cart-widget-product-amount+.cart-widget-product-unit+.cart-widget-product-name a[data-testid="cartWidgetProductName"] {
+          &:hover+.cart-widget-product-amount+.cart-widget-product-unit+.cart-widget-product-name a {
             text-decoration: underline;
           }
         }
@@ -273,7 +269,7 @@ body::after {
             flex: 1;
           }
 
-          a[data-testid="cartWidgetProductName"] {
+          a {
             color: abs.$color-black;
             font-weight: 400;
             font-size: 16px;
@@ -290,7 +286,7 @@ body::after {
             }
           }
 
-          span[data-testid="cartWidgetProductPrice"] {
+          span {
             display: flex;
             align-items: flex-end;
             text-align: right;
@@ -448,7 +444,7 @@ body::after {
     }
   }
 
-  .cart-widget-products .cart-widget-products-inner .cart-widget-product[data-testid="cartTitle"] {
+  .cart-widget-products .cart-widget-products-inner .place-cart-here .cart-widget-product {
     display: none;
   }
 
@@ -483,8 +479,6 @@ body::after {
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
-      // margin-left: -10px;
-      // margin-right: -10px;
       margin: -5px;
       margin-top: 5px;
       width: calc(100% + 10px);

@@ -100,9 +100,6 @@
       .top-categories-custom {
         position: initial;
         width: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
 
         h4 {
           text-align: center;
@@ -185,10 +182,6 @@
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
     z-index: 1;
-
-    // @media (max-width: 767px) {
-    //   top: 250px;
-    // }
   }
 
   &::after {
@@ -206,10 +199,6 @@
     border-left: 6px solid transparent;
     animation: rotation 1s linear infinite;
     z-index: 1;
-
-    // @media (max-width: 767px) {
-    //   top: 250px;
-    // }
   }
 
   @keyframes rotation {

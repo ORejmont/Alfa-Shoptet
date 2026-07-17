@@ -138,8 +138,6 @@
 
   .listSorting__controls {
     display: flex;
-    // flex-direction: column;
-    // align-items: center;
     flex-direction: column;
 
     max-height: 47px;
@@ -177,32 +175,7 @@
         border-bottom-left-radius: abs.$border-radius;
         border-bottom-right-radius: abs.$border-radius;
       }
-
-      // .order-placeholder {
-      //   border-radius: abs.$border-radius abs.$border-radius 0 0;
-      //   background-color: #d9dde7;
-      //   border-color: #d9dde7;
-      //   border-bottom-color: #c0c7cf;
-
-      //   +input+input+label,
-      //   +input+input+label.selected+input+label {
-      //     border-top-left-radius: 0;
-      //     border-top-right-radius: 0;
-      //   }
-
-      //   &::after {
-      //     transform: rotate(-180deg);
-      //   }
-
-      //   &:hover {
-      //     background-color: #d9dde7;
-      //   }
-      // }
     }
-
-    // input {
-    //   display: none;
-    // }
 
     li {
       margin: 0;
@@ -245,50 +218,8 @@
 
       &:hover {
         background-color: #d9dde7;
-        // color: #fff;
       }
     }
-
-    // .order-placeholder {
-    //   z-index: 1;
-    //   color: abs.$color-black;
-    //   border-top: 1px solid rgb(220, 220, 220);
-    //   border-radius: calc(47px / 2);
-    //   transition: background-color 0.3s ease, border-radius 0.3s ease;
-
-    //   +input+input+label,
-    //   +input+input+label.selected+input+label {
-    //     border-top-left-radius: calc(47px / 2);
-    //     border-top-right-radius: calc(47px / 2);
-
-    //     transition: background-color 0.3s ease, border-radius 0.3s ease;
-    //   }
-
-    //   &::after {
-    //     content: '\f113';
-    //     display: inline-block;
-    //     margin-left: 7px;
-
-    //     font-family: 'alfa';
-    //     color: abs.$color-black;
-    //     font-size: 11px;
-
-    //     transition-duration: .3s;
-    //   }
-    // }
-
-    // label {
-    //   border-top-style: none;
-
-    //   &.selected {
-    //     display: none;
-    //   }
-
-    //   &.last {
-    //     border-bottom-left-radius: abs.$border-radius;
-    //     border-bottom-right-radius: abs.$border-radius;
-    //   }
-    // }
   }
 }
 

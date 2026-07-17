@@ -7,10 +7,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  // @media (max-width: 767px) {
-  //   -webkit-line-clamp: 3;
-  // }
 }
 
 @media (max-width: 767px) {
@@ -201,7 +197,6 @@
 .columns-mobile-2 .products-block {
   @media (max-width: 479px) {
     width: calc(100% + abs.$small-gap-12);
-    // margin-bottom: calc(abs.$large-gap - calc(abs.$small-gap-12 / 2));
 
     margin-bottom: calc(abs.$mobile-gap - (abs.$small-gap-12 / 2));
 
@@ -458,8 +453,6 @@
       width: 100%;
       text-align: center;
 
-      // font-family: abs.$poppins;
-
       color: abs.$color-black;
 
       line-height: 1.1;
@@ -477,8 +470,6 @@
 
     .ratings-wrapper {
       padding: 0 $product-border-spacing;
-
-      // margin-bottom: 5px;
 
       display: flex;
       align-items: center;
@@ -594,10 +585,6 @@
               color: #ffb21c;
             }
 
-            // span[style="color:#cb0000"] {
-            //   color: #ff0000 !important;
-            // }
-
             .availability-amount {
               font-size: 14px;
               color: abs.$color-black;
@@ -607,102 +594,6 @@
 
         .p-tools {
           margin-top: 10px;
-
-          // width: 100%;
-          // display: flex;
-          // justify-content: center;
-
-          // form {
-          //   display: flex;
-          //   width: 100%;
-          // }
-
-          // .quantity {
-          //   margin-right: 10px;
-          //   position: relative;
-          //   flex-shrink: 0;
-
-          //   input {
-          //     padding: 0 30px;
-          //     text-align: center;
-          //     width: 90px;
-          //     height: 43.8px;
-          //     border-radius: 50px;
-          //     border-style: none;
-          //     // background-color: abs.$color-nav-element-background;
-          //     border: 2px solid #d9dde7;
-          //     font-size: 15px;
-          //     font-weight: 500;
-          //   }
-
-          //   .increase,
-          //   .decrease {
-          //     cursor: pointer;
-          //     width: 20px;
-          //     height: 20px;
-          //     border-radius: 50px;
-          //     display: block;
-          //     position: absolute;
-          //     top: 50%;
-          //     transform: translateY(-50%);
-
-          //     display: flex;
-          //     align-items: center;
-          //     justify-content: center;
-
-          //     transition-duration: .3s;
-
-          //     &:hover {
-          //       background-color: abs.$color-black;
-          //       border-color: abs.$color-black;
-
-          //       &::before,
-          //       &::after {
-          //         background-color: #fff;
-          //       }
-          //     }
-          //   }
-
-          //   .increase {
-          //     right: 8px;
-
-          //     &::before {
-          //       content: '';
-          //       display: block;
-          //       width: 10px;
-          //       height: 2px;
-          //       background-color: abs.$color-grey;
-          //       border-radius: 2px;
-          //       position: absolute;
-          //       transition-duration: .3s;
-          //     }
-
-          //     &::after {
-          //       content: '';
-          //       display: block;
-          //       width: 2px;
-          //       height: 10px;
-          //       background-color: abs.$color-grey;
-          //       border-radius: 2px;
-          //       position: absolute;
-          //       transition-duration: .3s;
-          //     }
-          //   }
-
-          //   .decrease {
-          //     left: 8px;
-
-          //     &::before {
-          //       content: '';
-          //       display: block;
-          //       width: 10px;
-          //       height: 2px;
-          //       background-color: abs.$color-grey;
-          //       border-radius: 2px;
-          //       transition-duration: .3s;
-          //     }
-          //   }
-          // }
 
           .btn {
             display: flex;
@@ -724,11 +615,7 @@
               background-color: abs.$color-conversion;
 
               &::before {
-                // content: '\f102';
-                // font-family: 'alfa';
-                // font-size: 10px;
                 color: #fff;
-                // margin-left: 3px;
                 font-weight: 400;
 
                 margin-top: -2px;
@@ -1104,7 +991,7 @@
     }
   }
 
-  // DUPLICITNÍ!
+  // DUPLICATE!
   @media (max-width: 1099px) {
 
     &.filters-visible,
@@ -1218,7 +1105,7 @@
     }
   }
 
-  // DUPLICITNÍ!
+  // DUPLICATE!
 }
 
 // Products inline images
