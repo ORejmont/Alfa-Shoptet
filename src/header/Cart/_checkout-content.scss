@@ -275,6 +275,16 @@
     .form-group {
       flex-direction: column;
       align-items: flex-start;
+
+      &.form-group--inline:not(.smart-label-wrapper) {
+        margin-bottom: 20px;
+
+        p {
+          margin-bottom: 3px;
+          font-size: 15px;
+          line-height: 1.2;
+        }
+      }
     }
   }
 
@@ -288,6 +298,15 @@
   }
 
   /* Step 2 focus */
+
+  .co-billing-address .form-group.smart-label-wrapper.populated {
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+
+  .co-contact-information .form-legend[aria-hidden="true"] {
+    display: none;
+  }
 }
 
 .ordering-process #content label[for="login"]+div {
