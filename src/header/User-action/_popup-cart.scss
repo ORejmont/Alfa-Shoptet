@@ -46,6 +46,12 @@ body::after {
   transition-duration: .3s;
   transition-timing-function: ease-in;
 
+  display: block;
+
+  &[aria-hidden=true] {
+    display: block;
+  }
+
   @media (max-width: 767px) {
     width: 100%;
   }
