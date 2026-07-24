@@ -1,3 +1,5 @@
+import "slick-carousel";
+
 export function initProductSlick() {
   if (
     document.body.classList.contains("type-detail") &&
