@@ -33,6 +33,19 @@
 
   .slick-slide {
     height: inherit !important;
+    margin: 7.5px;
+
+    >div {
+      height: 100%;
+
+      .product {
+        height: 100%;
+      }
+    }
+
+    .product {
+      margin: 0
+    }
   }
 
   .slick-arrow {

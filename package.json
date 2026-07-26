@@ -32,5 +32,9 @@
   },
   "name": "Alfa",
   "description": "Alfa is a template build on Classic version",
-  "_id": "Alfa@1.0.0"
+  "_id": "Alfa@1.0.0",
+  "dependencies": {
+    "jquery": "3.7.1",
+    "slick-carousel": "^1.8.1"
+  }
 }

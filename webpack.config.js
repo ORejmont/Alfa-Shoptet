@@ -54,6 +54,9 @@ export default (env) => {
   return {
     mode: isProduction ? "production" : "development",
     devtool: isProduction ? false : "eval",
+    externals: {
+      jquery: "jQuery",
+    },
     entry: {
       ...getEntries("js", isProduction),
       ...getEntries("scss", isProduction),
