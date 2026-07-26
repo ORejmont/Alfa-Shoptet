@@ -27,9 +27,6 @@ export function initProductSlick() {
 }
 
 function initProductsSlick(container, isHP = false) {
-  console.log("Container:", container);
-  console.log("Children:", container.children);
-
   if (container.closest("#colorbox, .advanced-order")) return;
   if ($(container).hasClass("slick-initialized")) return;
 
