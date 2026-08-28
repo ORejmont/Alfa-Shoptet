@@ -1,5 +1,94 @@
 @use "../Abstracts" as abs;
 
+.top-navigation-tools--language {
+  .dropdown {
+    position: relative;
+
+    >span {
+      display: none;
+    }
+
+    &.open {
+      #topNavigationDropdown {
+        background-color: #e9ebec;
+        border-radius: 16px 16px 16px 0;
+        color: #0f0f0f;
+
+        .caret::before {
+          transform: rotate(-180deg);
+        }
+      }
+
+      .dropdown-menu {
+        display: block;
+      }
+    }
+
+    #topNavigationDropdown {
+      align-items: center;
+      border-radius: 16px;
+      color: #72727d;
+      cursor: pointer;
+      display: flex;
+      font-size: 14px;
+      margin: 3px 0;
+      padding: 7px 10px 5px;
+      text-decoration: none;
+      transition-duration: .3s;
+      border: 0;
+      background-color: transparent;
+
+      &:hover {
+        background-color: #e9ebec;
+        color: #0f0f0f;
+      }
+
+      .caret {
+        margin-left: 4px;
+
+        &::before {
+          content: '\f113';
+          font-family: 'alfa';
+          font-size: 9px;
+          display: block;
+          transition: transform .2s ease-in-out;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      background-color: #fff;
+      border: 2px solid #e9ebec;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+      display: none;
+      left: 0;
+      max-width: 130px;
+      padding: 5px;
+      position: absolute;
+      top: calc(100% - 3px);
+      z-index: 9999;
+
+      a {
+        align-items: center;
+        border-radius: 5px;
+        color: #0f0f0f;
+        display: flex;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.1;
+        padding: 5px 10px;
+        text-decoration: none;
+        width: 100%;
+
+        &:hover {
+          background-color: #e9ebec;
+        }
+      }
+    }
+  }
+}
+
 .languagesMenu {
   @media (max-width: 767px) {
     display: none;
