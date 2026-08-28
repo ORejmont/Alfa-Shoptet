@@ -138,6 +138,10 @@
         padding: 8px;
       }
 
+      &:empty {
+        display: none;
+      }
+
       &:not(.is-black):not(.is-white):not(.has-background) {
         display: none;
       }
