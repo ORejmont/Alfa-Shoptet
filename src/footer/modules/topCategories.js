@@ -120,31 +120,21 @@ function handleHomepageBannerLoading(bannersRow) {
     document.querySelector("#carousel .extended-banner-texts") ||
     document.querySelector(".next-to-carousel-banners .extended-banner-texts");
 
-  let loadedStateSet = false;
-
-  const showBanners = () => {
-    if (loadedStateSet) return;
-
-    loadedStateSet = true;
-    finalizeLoadedState(bannersRow);
-  };
-
-  // Wait up to 200 ms for the images
-  setTimeout(showBanners, 200);
-
+  // Process banner texts before showing the banners
   if (bannersInCritical) {
-    imagesLoaded(bannersRow, () => {
-      processBannerTexts();
-      requestAnimationFrame(() => adjustBannerImages?.());
-      setTimeout(() => adjustBannerImages?.(), 600);
-
-      showBanners();
-    });
-
-    return;
+    processBannerTexts();
   }
 
-  imagesLoaded(bannersRow, showBanners);
+  // The HTML structure is ready, so we can show the banners immediately
+  finalizeLoadedState(bannersRow);
+
+  // Wait for images only for image size adjustments
+  if (bannersInCritical) {
+    imagesLoaded(bannersRow, () => {
+      requestAnimationFrame(() => adjustBannerImages?.());
+      setTimeout(() => adjustBannerImages?.(), 600);
+    });
+  }
 }
 
 function initCategoryBannerTexts() {
