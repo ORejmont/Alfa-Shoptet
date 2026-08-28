@@ -145,7 +145,7 @@
                 display: block;
                 border-radius: abs.$border-radius;
 
-                border: 2px solid transparent;
+                border: 2px solid #efefef;
 
                 img {
                   object-fit: cover;
@@ -158,8 +158,8 @@
                   border-color: abs.$color-primary;
                 }
 
-                &:hover img {
-                  opacity: .7;
+                &:hover {
+                  border-color: abs.$color-primary;
                 }
 
                 &:nth-last-of-type(2) {
