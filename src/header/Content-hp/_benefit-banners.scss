@@ -1,5 +1,36 @@
 @use "../Abstracts" as abs;
 
+@media (min-width: 992px) and (max-width: 1439px) {
+  .sidebar+#content {
+    .benefitBanner {
+      .benefitBanner__item {
+        width: calc(100% / 2);
+
+        +.benefitBanner__item {
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            background-color: abs.$border-color;
+            height: 40px;
+          }
+        }
+
+        @media (max-width: 991px) {
+          &:nth-child(2n + 3) {
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .benefitBanner {
   display: flex;
   border-radius: abs.$border-radius;
