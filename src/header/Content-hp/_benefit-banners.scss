@@ -31,6 +31,16 @@
   }
 }
 
+#hodnoceniobchodu {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #fff;
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+}
+
+
 .benefitBanner {
   display: flex;
   border-radius: abs.$border-radius;

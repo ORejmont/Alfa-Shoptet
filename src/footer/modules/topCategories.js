@@ -38,7 +38,7 @@ function getHomepageBannersRow() {
   return document.querySelector(
     isMobile || isSimplifiedLayout
       ? "#content > .row.banners-row"
-      : ".before-carousel .row.banners-row",
+      : ".before-carousel .row.banners-row"
   );
 }
 
@@ -82,7 +82,7 @@ function renderHomepageTopCategories(bannersRow) {
       <div class="top-categories-wrapper">
         ${topCategoriesHTML}
       </div>
-    </div>`,
+    </div>`
   );
 }
 
@@ -94,7 +94,7 @@ function wrapRightColumns(bannersRow) {
   const wideCarousel = bannersRow.querySelector(".wide-carousel");
   const nextToCarousel = bannersRow.querySelector(".next-to-carousel-banners");
   const wideCarouselHasContent = wideCarousel?.querySelector(
-    ".carousel-inner .item",
+    ".carousel-inner .item"
   );
 
   const wrapper = document.createElement("div");
@@ -120,18 +120,31 @@ function handleHomepageBannerLoading(bannersRow) {
     document.querySelector("#carousel .extended-banner-texts") ||
     document.querySelector(".next-to-carousel-banners .extended-banner-texts");
 
+  let loadedStateSet = false;
+
+  const showBanners = () => {
+    if (loadedStateSet) return;
+
+    loadedStateSet = true;
+    finalizeLoadedState(bannersRow);
+  };
+
+  // Wait up to 200 ms for the images
+  setTimeout(showBanners, 200);
+
   if (bannersInCritical) {
     imagesLoaded(bannersRow, () => {
       processBannerTexts();
       requestAnimationFrame(() => adjustBannerImages?.());
       setTimeout(() => adjustBannerImages?.(), 600);
-      finalizeLoadedState(bannersRow);
+
+      showBanners();
     });
 
     return;
   }
 
-  imagesLoaded(bannersRow, () => finalizeLoadedState(bannersRow));
+  imagesLoaded(bannersRow, showBanners);
 }
 
 function initCategoryBannerTexts() {
@@ -140,7 +153,7 @@ function initCategoryBannerTexts() {
   if (!bannerCategory) return;
 
   const hasBanners = document.querySelector(
-    ".banner-category .extended-banner-texts",
+    ".banner-category .extended-banner-texts"
   );
 
   if (!hasBanners) return;
