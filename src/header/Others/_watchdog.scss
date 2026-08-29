@@ -69,3 +69,38 @@
     margin-bottom: 3px;
   }
 }
+
+body #cboxContent #watchdog-form {
+  text-align: left;
+
+  .submit-wrapper {
+    justify-content: center;
+    gap: 5px;
+
+    #watchdog-reset {
+      background-color: #fc5858;
+    }
+  }
+
+  .form-group {
+    label {
+      width: auto;
+      text-align: left;
+      padding-right: 10px;
+      math-depth: 0;
+      margin-bottom: 0;
+    }
+
+    .disclaimer {
+      font-size: 15px;
+      color: #8a8a8a;
+      width: 100%;
+      text-align: left;
+      margin-top: 2px;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
