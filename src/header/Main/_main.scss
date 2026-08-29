@@ -263,9 +263,10 @@ body #cboxContent .form-group.rating-stars-group {
 }
 
 body #cboxContent #dialogFormRating .dialog__actionButtons {
+  justify-content: center;
+
   .btn {
     text-align: center;
-    justify-content: center;
   }
 }
 
