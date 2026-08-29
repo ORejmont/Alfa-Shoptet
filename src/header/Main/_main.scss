@@ -252,6 +252,23 @@ h6 {
   display: none !important;
 }
 
+body #cboxContent .form-group.rating-stars-group {
+  align-items: center;
+
+  label.rating-star {
+    margin: 0;
+    width: auto;
+    padding: 0;
+  }
+}
+
+body #cboxContent #dialogFormRating .dialog__actionButtons {
+  .btn {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 .form-group.rating-stars-group {
   display: flex;
   flex-direction: column;
