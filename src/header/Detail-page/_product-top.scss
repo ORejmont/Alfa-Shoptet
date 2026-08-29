@@ -4,8 +4,16 @@
   text-align: center;
 }
 
-#formProductQuestion .submit-wrapper {
-  justify-content: center;
+#formProductQuestion {
+  .form-group {
+    .form-control-wrapper {
+      width: 100%;
+    }
+  }
+
+  .submit-wrapper {
+    justify-content: center;
+  }
 }
 
 .type-detail {
