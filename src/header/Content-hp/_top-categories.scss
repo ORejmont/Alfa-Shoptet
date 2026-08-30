@@ -8,6 +8,10 @@
   .type-index .sidebar+#content .row.banners-row {
     flex-direction: column-reverse;
 
+    .right-columns-wrapper {
+      width: 100%;
+    }
+
     .top-categories-custom {
       position: initial;
       width: 100%;
