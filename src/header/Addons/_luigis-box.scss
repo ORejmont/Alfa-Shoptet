@@ -1,0 +1,67 @@
+@use "../Abstracts" as abs;
+
+#lb-recommend-element-homepage_personalized {
+  max-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  .products .lb-product {
+    .ratings-wrapper {
+      min-height: auto;
+    }
+
+    .p-bottom {
+      .prices {
+        flex-basis: initial;
+        flex: initial;
+      }
+
+      .p-tools {
+        flex-basis: initial;
+        text-align: center;
+      }
+
+      .p-desc.desc-height {
+        display: block;
+        overflow: initial;
+      }
+
+      >div {
+        flex-wrap: initial;
+      }
+    }
+  }
+}
+
+#lb-recommend-element-product_detail {
+  .products .lb-product {
+    @media (min-width: 992px) {
+      width: calc(25% - 15px) !important;
+    }
+
+    .ratings-wrapper {
+      min-height: auto;
+    }
+
+    .p-bottom {
+      .prices {
+        flex-basis: initial;
+        flex: initial;
+      }
+
+      .p-tools {
+        flex-basis: initial;
+        text-align: center;
+      }
+
+      .p-desc.desc-height {
+        display: block;
+        overflow: initial;
+      }
+
+      >div {
+        flex-wrap: initial;
+      }
+    }
+  }
+}
