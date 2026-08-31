@@ -23,10 +23,27 @@ function initCartWindowEvents() {
 
   cartCountButton.addEventListener("click", (event) => {
     event.preventDefault();
+    event.stopPropagation();
+
+    toggleCartWindow(cartWidget, cartCountButton);
+  });
+
+  cartCountButton.addEventListener("pointerup", (event) => {
+    if (event.pointerType === "mouse") return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
     toggleCartWindow(cartWidget, cartCountButton);
   });
 
   document.addEventListener("click", (event) => {
+    closeCartOnOutsideClick(event, cartWidget, cartCountButton);
+  });
+
+  document.addEventListener("pointerup", (event) => {
+    if (event.pointerType === "mouse") return;
+
     closeCartOnOutsideClick(event, cartWidget, cartCountButton);
   });
 
@@ -39,7 +56,7 @@ function initCartWindowEvents() {
 
 function toggleCartWindow(cartWidget, cartCountButton) {
   const isVisible = document.body.classList.contains(
-    "cart-window-visible-custom",
+    "cart-window-visible-custom"
   );
 
   if (isVisible) {
@@ -75,7 +92,7 @@ function updateCartContent(cartWidget, cartCountButton) {
 function removeCartCustomElements(cartWidget) {
   cartWidget
     .querySelectorAll(
-      ".cart-window-title, .cart-window-empty-content, .cart-window-total, .price-range, .cart-suggested-categories",
+      ".cart-window-title, .cart-window-empty-content, .cart-window-total, .price-range, .cart-suggested-categories"
     )
     .forEach((el) => el.remove());
 }
@@ -125,7 +142,7 @@ function updateEmptyCartContent(cartWidget, cartCountButton, titleHTML, dict) {
 function removeEmptyCartElements(cartWidget) {
   cartWidget
     .querySelectorAll(
-      ".cart-window-empty-content, .cart-suggested-categories, .cart-continue-shopping",
+      ".cart-window-empty-content, .cart-suggested-categories, .cart-continue-shopping"
     )
     .forEach((el) => el.remove());
 }
@@ -142,7 +159,7 @@ function renderSuggestedCategories(cartWidget, emptyHTML, dict) {
   const topCatsData = getTopCategoriesData(topCategories);
   const topCategoriesHTML = renderTopCategoriesHTML(topCatsData, {
     itemClass: "top-category-item-cart",
-    useOriginalImage: true,
+    useOriginalImage: true
   });
 
   if (!topCategoriesHTML) return;
@@ -172,20 +189,20 @@ function renderContinueShoppingButton(cartWidget, dict) {
   });
 
   const continueOrderButton = cartWidget.querySelector(
-    "#continue-order-button",
+    "#continue-order-button"
   );
 
   if (continueOrderButton) {
     continueOrderButton.parentNode.insertBefore(
       continueBtn,
-      continueOrderButton,
+      continueOrderButton
     );
   }
 }
 
 function renderCartTotal(cartWidget, dict) {
   const priceEls = cartWidget.querySelectorAll(
-    ".cart-widget-product .cart-widget-product-name > span",
+    ".cart-widget-product .cart-widget-product-name > span"
   );
 
   const totalData = calculateCartTotal(priceEls);
@@ -241,7 +258,7 @@ function calculateCartTotal(priceEls) {
     total,
     currency,
     decimalSeparator,
-    hasDecimals,
+    hasDecimals
   };
 }
 
