@@ -35,6 +35,8 @@
 
 #lb-recommend-element-product_detail {
   .products .lb-product {
+    border: 0 !important;
+
     @media (min-width: 992px) {
       width: calc(25% - 15px) !important;
     }
