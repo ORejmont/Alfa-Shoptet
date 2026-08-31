@@ -4,6 +4,10 @@
   .dropdown {
     position: relative;
 
+    @media (max-width: 767px) {
+      display: none;
+    }
+
     >span {
       display: none;
     }
