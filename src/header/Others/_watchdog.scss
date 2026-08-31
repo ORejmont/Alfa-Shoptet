@@ -79,6 +79,10 @@ body #cboxContent #watchdog-form {
 
     #watchdog-reset {
       background-color: #fc5858;
+
+      &.hide {
+        display: none;
+      }
     }
   }
 
