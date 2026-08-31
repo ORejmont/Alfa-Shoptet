@@ -481,7 +481,8 @@
             margin-top: 2px;
             width: 100%;
 
-            .hidden-split-parameter:not(select) {
+            .hidden-split-parameter:not(select),
+            #simple-variants {
               display: flex;
               align-items: stretch;
               flex-wrap: wrap;
