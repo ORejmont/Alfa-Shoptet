@@ -2,7 +2,11 @@
 
 .type-search {
   .products-block .product {
-    width: calc(100% / 2 - 15px) !important;
+    width: calc(100% / 1 - 15px) !important;
+
+    @media (min-width: 480px) {
+      width: calc(100% / 2 - 15px) !important;
+    }
 
     @media (min-width: 992px) {
       width: calc(100% / 3 - 15px) !important;
