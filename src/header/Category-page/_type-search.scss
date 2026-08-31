@@ -1,6 +1,18 @@
 @use "../Abstracts" as abs;
 
 .type-search {
+  .products-block .product {
+    width: calc(100% / 2 - 15px) !important;
+
+    @media (min-width: 992px) {
+      width: calc(100% / 3 - 15px) !important;
+    }
+
+    @media (min-width: 1200px) {
+      width: calc(100% / 4 - 15px) !important;
+    }
+  }
+
   .search-results-groups {
     .display-results-group {
       display: block;

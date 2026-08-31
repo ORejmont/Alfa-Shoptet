@@ -136,7 +136,7 @@ body {
     &:only-child {
       width: calc(100% - 20px);
 
-      @media (min-width: 1199px) {
+      @media (min-width: 1200px) {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
