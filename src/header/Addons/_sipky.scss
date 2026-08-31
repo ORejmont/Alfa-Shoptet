@@ -1,0 +1,24 @@
+.has-detail-product-arrows .carousel-control--product.right,
+.has-detail-product-arrows .carousel-control--product.left {
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '\f113';
+    font-family: 'alfa';
+    font-size: 16px;
+    font-weight: 400;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    transform: rotate(-90deg);
+  }
+}
+
+.has-detail-product-arrows .carousel-control--product.left {
+  &::after {
+    rotate: 90deg;
+  }
+}
