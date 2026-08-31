@@ -52,16 +52,20 @@ function handleSiteMsgVisibility() {
     siteMsg.classList.remove("site-msg-visible");
   }
 
-  hideBtn.addEventListener("click", () => {
-    const isNowVisible = siteMsg.classList.toggle("site-msg-visible");
+  if (!hideBtn.dataset.initialized) {
+    hideBtn.addEventListener("click", () => {
+      const isNowVisible = siteMsg.classList.toggle("site-msg-visible");
 
-    if (canUseStorage) {
-      try {
-        localStorage.setItem(toggleKey, isNowVisible.toString());
-      } catch {
-        // Ignore storage errors.
+      if (canUseStorage) {
+        try {
+          localStorage.setItem(toggleKey, isNowVisible.toString());
+        } catch {
+          // Ignore storage errors.
+        }
       }
-    }
-  });
+    });
+
+    hideBtn.dataset.initialized = "true";
+  }
 }
 /* Hide site-msg */
