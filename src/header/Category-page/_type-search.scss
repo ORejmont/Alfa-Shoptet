@@ -67,10 +67,6 @@
       width: calc(100% + 10px);
       margin: -5px;
 
-      @media (max-width: 767px) {
-        margin: -2.5px -5px;
-      }
-
       ul {
         display: flex;
         flex-direction: row;
@@ -97,10 +93,6 @@
 
           @media (max-width: 991px) {
             width: calc(100% / 2 - 10px);
-          }
-
-          @media (max-width: 767px) {
-            margin: 2.5px 5px;
           }
 
           @media (max-width: 479px) {
