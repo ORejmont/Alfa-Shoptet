@@ -1,5 +1,9 @@
 @use "../Abstracts" as abs;
 
+.type-search .sidebar {
+  display: none;
+}
+
 .sidebar {
   font-weight: 400;
   font-size: 15px;

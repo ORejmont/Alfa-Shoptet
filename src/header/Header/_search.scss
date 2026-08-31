@@ -86,7 +86,6 @@
       left: 0;
       width: 100%;
       max-height: calc(100vh - 32px - 68px - 100px); // Edit for mobile version
-      background-color: #fff;
 
       overflow-y: auto;
 
@@ -166,7 +165,6 @@
           text-decoration: none;
           color: abs.$color-black;
           padding: 8px 15px;
-          background-color: #fff;
           line-height: 1.1;
 
           width: calc(100% / 4 - 10px);
