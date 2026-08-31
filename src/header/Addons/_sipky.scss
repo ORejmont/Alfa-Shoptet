@@ -1,5 +1,5 @@
-.has-detail-product-arrows .carousel-control--product.right,
-.has-detail-product-arrows .carousel-control--product.left {
+body.has-detail-product-arrows .carousel-control--product.right,
+body.has-detail-product-arrows .carousel-control--product.left {
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -10,6 +10,11 @@
     font-family: 'alfa';
     font-size: 16px;
     font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 30px;
     height: 30px;
     color: #fff;
@@ -17,8 +22,15 @@
   }
 }
 
-.has-detail-product-arrows .carousel-control--product.left {
+body.has-detail-product-arrows .carousel-control--product.left {
   &::after {
-    rotate: 90deg;
+    transform: rotate(90deg);
+    margin-left: -7px;
+  }
+}
+
+body.has-detail-product-arrows .carousel-control--product.left {
+  &::after {
+    margin-left: -5px;
   }
 }
