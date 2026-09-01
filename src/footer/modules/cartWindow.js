@@ -2,6 +2,8 @@ import { getTranslation, getLanguage } from "../utils/getTranslation.js";
 import { getTopCategoriesData } from "../utils/getTopCategoriesData.js";
 import { renderTopCategoriesHTML } from "../utils/renderTopCategoriesHTML.js";
 
+console.log("ALFA-CART-BUILD-2026-09-01-A");
+
 let isCartWindowInitialized = false;
 
 export function initCartWindow() {
