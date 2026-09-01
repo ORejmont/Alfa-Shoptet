@@ -1,7 +1,6 @@
-import { translations } from "../config/translations.js";
+import { getTranslation, getLanguage } from "../utils/getTranslation.js";
 import { getTopCategoriesData } from "../utils/getTopCategoriesData.js";
 import { renderTopCategoriesHTML } from "../utils/renderTopCategoriesHTML.js";
-import { getTranslation } from "../utils/getTranslation.js";
 
 let isCartWindowInitialized = false;
 
@@ -229,15 +228,10 @@ function renderCartTotal(cartWidget, dict) {
 function calculateCartTotal(priceEls) {
   let total = 0;
   let currency = "";
-  let decimalSeparator = ".";
   let hasDecimals = false;
 
   priceEls.forEach((el, idx) => {
     const text = el.textContent.trim();
-
-    if (idx === 0) {
-      decimalSeparator = getDecimalSeparator(text);
-    }
 
     const number = parseLocalizedPrice(text);
 
@@ -257,17 +251,15 @@ function calculateCartTotal(priceEls) {
   return {
     total,
     currency,
-    decimalSeparator,
     hasDecimals
   };
 }
 
-function formatCartTotal({ total, currency, decimalSeparator, hasDecimals }) {
-  let formattedTotal = hasDecimals ? total.toFixed(2) : total.toFixed(0);
-
-  if (decimalSeparator === ",") {
-    formattedTotal = formattedTotal.replace(".", ",");
-  }
+function formatCartTotal({ total, currency, hasDecimals }) {
+  const formattedTotal = new Intl.NumberFormat(getLanguage(), {
+    minimumFractionDigits: hasDecimals ? 2 : 0,
+    maximumFractionDigits: hasDecimals ? 2 : 0
+  }).format(total);
 
   return `${formattedTotal} ${currency}`.trim();
 }
@@ -295,13 +287,6 @@ function renderFreeShippingProgress(cartWidget, total) {
   }
 
   freeContainer.classList.add("free");
-}
-
-function getDecimalSeparator(text) {
-  if (text.match(/\d+,\d{1,2}/)) return ",";
-  if (text.match(/\d+\.\d{1,2}/)) return ".";
-
-  return ".";
 }
 
 function getCurrency(text) {
