@@ -112,13 +112,37 @@
                 flex-direction: column;
                 align-items: flex-end;
 
-                .flag-discount {
+                .flag {
                   padding: 3px 5px;
-                  border-radius: 100px;
+                  border-radius: 12px;
                   font-size: 13px;
                   font-weight: 500;
-                  background-color: #fcf3f4;
-                  color: #ff2020;
+                  background-color: #fafafa;
+
+                  &.flag-discount {
+                    background-color: #fcf3f4;
+                    color: #ff2020;
+                  }
+
+                  &.flag-freeshipping {
+                    background-color: #e2f4ff;
+                    color: #009fff;
+                    display: flex;
+                    align-items: center;
+
+                    .icon-van {
+                      display: flex;
+                      height: 14.3px;
+
+                      &::before {
+                        content: '\f118';
+                        font-family: 'alfa';
+                        font-size: 16px;
+                        margin-right: 4px;
+                        margin-top: -2px;
+                      }
+                    }
+                  }
 
                   .price-standard {
                     display: none;
