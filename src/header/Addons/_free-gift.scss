@@ -1,0 +1,127 @@
+@use "../Abstracts" as abs;
+
+.free-gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .free-gifts-wrapper {
+    width: 100%;
+  }
+}
+
+.free-gifts,
+.free-product-gifts {
+  li {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &::before {
+      content: none;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    label {
+      margin: 0 !important;
+      padding: 0;
+      align-items: center;
+      display: flex;
+      gap: 10px;
+
+      background-color: #f3f5f8;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    input {
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      appearance: none;
+    }
+  }
+}
+
+.free-gifts-img {
+  position: relative;
+
+  >img {
+    width: 60px;
+    display: flex;
+  }
+
+  .free-gifts-img-hover {
+    pointer-events: none;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    opacity: 0;
+
+    transition-duration: .3s;
+
+    img {
+      border-radius: 10px;
+      border: 2px solid #efefef;
+      max-width: 300px;
+
+      @media (max-width: 767px) {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &:hover {
+    pointer-events: initial;
+    opacity: 1;
+  }
+}
+
+.free-gift-name {
+  font-weight: 500;
+}
+
+.free-gift-trigger {
+  margin-top: 10px;
+}
+
+#colorbox .free-gifts,
+#colorbox .free-product-gifts {
+  margin-top: 15px;
+
+  li {
+    display: block;
+    margin-bottom: 5px;
+
+    &.active {
+      label {
+        background-color: abs.$color-primary;
+        color: #fff;
+      }
+    }
+
+    label {
+      border: 2px solid transparent;
+    }
+
+    &:not(.active) {
+      label {
+        transition-duration: .3s;
+
+        &:hover {
+          border-color: abs.$color-primary;
+        }
+      }
+    }
+  }
+}
