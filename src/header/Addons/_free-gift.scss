@@ -32,6 +32,7 @@
       align-items: center;
       display: flex;
       gap: 10px;
+      border: 2px solid transparent;
 
       background-color: #f3f5f8;
       padding: 5px;
@@ -74,6 +75,7 @@
       border-radius: 10px;
       border: 2px solid #efefef;
       max-width: 300px;
+      display: flex;
 
       @media (max-width: 767px) {
         max-width: 250px;
@@ -108,10 +110,6 @@
         background-color: abs.$color-primary;
         color: #fff;
       }
-    }
-
-    label {
-      border: 2px solid transparent;
     }
 
     &:not(.active) {
