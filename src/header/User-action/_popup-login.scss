@@ -7,8 +7,7 @@
   @include abs.popup_background;
   border-radius: abs.$border-radius;
   z-index: 11;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
   padding: 20px;
 
   transition-duration: .3s;
@@ -128,8 +127,7 @@
 
 .login-window-visible {
   .login-widget {
-    opacity: 1;
-    pointer-events: auto;
+    display: block;
     border-top-right-radius: 0;
   }
 
