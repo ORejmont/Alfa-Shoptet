@@ -523,6 +523,14 @@ body {
     flex: 0 0 100%;
     order: 1;
     text-align: left;
+
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+
+    .new-widget-choose {
+      width: 100%;
+    }
   }
 
   .payment-logo img {
