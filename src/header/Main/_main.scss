@@ -733,6 +733,21 @@ code {
   z-index: 999999;
 }
 
+.question-tooltip {
+  content: '?';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: abs.$border-radius;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  top: -1px;
+}
+
 .tooltip-arrow {
   border-color: transparent;
   border-style: solid;
