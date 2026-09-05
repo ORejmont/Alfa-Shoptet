@@ -152,6 +152,12 @@
     display: none;
   }
 
+  #filters-wrapper #filters .close {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   #filters-wrapper,
   .filters-wrapper {
     display: none;
