@@ -1,0 +1,31 @@
+@use "../Abstracts" as abs;
+
+.plus-gallery-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  justify-content: center;
+
+  .plus-gallery-item {
+    margin: 10px;
+
+    a {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      border: 2px solid #efefef;
+      border-radius: 10px;
+      background-color: #fff;
+
+      &:hover {
+        border-color: abs.$color-primary;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
