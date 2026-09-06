@@ -229,6 +229,11 @@
               border-top-right-radius: abs.$border-radius;
               border-bottom-right-radius: abs.$border-radius;
             }
+
+            &.sold-out td {
+              border-top-left-radius: abs.$border-radius;
+              border-bottom-left-radius: abs.$border-radius;
+            }
           }
         }
       }
