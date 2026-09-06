@@ -405,6 +405,7 @@ ul.poll {
 .sidebar .box-topProducts {
   .top-products {
     counter-reset: top;
+    padding-left: 0;
 
     li {
       display: flex;
@@ -470,6 +471,13 @@ ul.poll {
           color: abs.$color-black;
           font-size: 16px;
           line-height: 1.1;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         strong {
