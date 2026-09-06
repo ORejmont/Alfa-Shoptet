@@ -352,6 +352,7 @@
 
       .p-detail-info {
         margin-bottom: 5px;
+        font-size: 15px;
       }
 
       .stars-wrapper {
@@ -466,6 +467,10 @@
 
           &:last-of-type {
             margin-bottom: 0;
+          }
+
+          &.sold-out {
+            margin-bottom: 10px;
           }
 
           select {
@@ -635,7 +640,7 @@
       >p {
         margin-top: -15px + 3px;
         margin-bottom: 15px;
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .social-buttons-wrapper {
