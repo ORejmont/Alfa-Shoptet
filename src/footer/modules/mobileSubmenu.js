@@ -1,26 +1,36 @@
-let isMobileSubmenuListenerRegistered = false;
+let mobileSubmenuObserver = null;
 
-/* On mobile, create custom submenu-visible-custom class for opening navigation submenus */
+/* Synchronize submenu-visible-custom with the actual submenu state */
 export function initMobileSubmenu() {
-  if (isMobileSubmenuListenerRegistered) return;
+  if (mobileSubmenuObserver) return;
 
-  const nav = document.querySelector("#header #navigation");
-  if (!nav) return;
+  const menu = document.querySelector("#header #navigation .menu-level-1");
 
-  nav.addEventListener("click", (e) => {
-    const arrow = e.target.closest(".menu-level-1 > li > a > .submenu-arrow");
+  if (!menu) return;
 
-    if (!arrow) return;
+  const syncBodyClass = () => {
+    const hasExpandedItem = Array.from(menu.children).some((item) => {
+      if (!(item instanceof HTMLElement)) return false;
 
-    requestAnimationFrame(() => {
-      const hasExpandedItem = Boolean(
-        nav.querySelector(".menu-level-1 > li.exp")
+      const link = item.querySelector(":scope > a");
+
+      return (
+        item.classList.contains("exp") ||
+        link?.getAttribute("aria-expanded") === "true"
       );
-
-      document.body.classList.toggle("submenu-visible-custom", hasExpandedItem);
     });
+
+    document.body.classList.toggle("submenu-visible-custom", hasExpandedItem);
+  };
+
+  mobileSubmenuObserver = new MutationObserver(syncBodyClass);
+
+  mobileSubmenuObserver.observe(menu, {
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["class", "aria-expanded"]
   });
 
-  isMobileSubmenuListenerRegistered = true;
+  syncBodyClass();
 }
-/* On mobile, create custom submenu-visible-custom class for opening navigation submenus */
+/* Synchronize submenu-visible-custom with the actual submenu state */
