@@ -84,6 +84,10 @@
 
 #lb-search-element .lb-search {
   padding-top: 139px;
+
+  @media (max-width: 767px) {
+    padding-top: 72px;
+  }
 }
 
 #lb-search-element .products-block>.lb-result {
