@@ -1,0 +1,196 @@
+@use "../Abstracts" as abs;
+
+.dklab-filter-window-active {
+  #filters-wrapper {
+    display: block;
+
+    .filters-wrapper {
+      display: block;
+    }
+  }
+}
+
+body.dklab-filters {
+  #content .filters-unveil-button-wrapper {
+    // &.hide {
+    //   display: none !important;
+    // }
+
+    .unveil-button {
+      margin-top: 40px;
+      margin-bottom: -15px;
+    }
+  }
+
+  .slider-content {
+    background-color: transparent;
+  }
+
+  #filters-wrapper {
+    display: block;
+    top: 0;
+    margin-bottom: 0;
+    position: initial;
+
+    .filters-wrapper {
+      display: block;
+      top: 0;
+      margin-bottom: 0;
+      position: initial;
+
+      #filters {
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        max-height: none !important;
+        background-color: transparent !important;
+        overflow: initial !important;
+      }
+    }
+  }
+
+  &.type-category #filters-wrapper #filters h4,
+  &.type-category .filters-wrapper #filters h4 {
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .filter-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &.type-category #filters-wrapper #filters .filter-section-count,
+  &.type-category .filters-wrapper #filters .filter-section-count {
+    flex-direction: column;
+  }
+
+  .ui-slider-horizontal .ui-slider-handle {
+    margin: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &.type-category #filters-wrapper #filters .filter-section-count #clear-filters,
+  &.type-category .filters-wrapper #filters .filter-section-count #clear-filters {
+    margin-bottom: 10px;
+    margin-top: -10px;
+  }
+
+  &.type-category #filters-wrapper #filters,
+  &.type-category .filters-wrapper #filters {
+    display: block;
+  }
+}
+
+html.dklab-filter-window-active .dkLab-filters-close-button:before,
+html.dklab-filter-window-active body .dkLab-filters-close-button:before {
+  speak: none;
+  display: inline-block;
+  font-family: 'alfa';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: none;
+  vertical-align: middle;
+  content: '\f107';
+  font-size: 26px;
+  left: 10px;
+  line-height: 40px;
+  position: absolute;
+  text-indent: 0;
+  top: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.dklab-filters .dkLab-filters-button--remove:before,
+.dklab-filters .dkLab-filters-button__item--cancel:after {
+  speak: none;
+  display: inline-block;
+  font-family: "alfa";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  content: "\f107";
+  font-size: 14px;
+  text-indent: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.dkLab-filters-button__item {
+  border-radius: 4px;
+}
+
+.dkLab-filters-wrapper h4:after {
+  content: '\f10f';
+  font-family: 'alfa';
+  font-size: 12px;
+  color: #0f0f0f;
+  font-weight: 400;
+}
+
+body.dklab-filters {
+  #filters-wrapper:has(> .filters-wrapper.dkLab-mobile-window:not(.dkLab-mobile-window--active)) {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+
+  html.dklab-filter-window-active--mobile body.dklab-filters #filters-wrapper .filters-wrapper.dkLab-mobile-window,
+  html.dklab-filter-window-active body.dklab-filters #filters-wrapper .filters-wrapper.dkLab-mobile-window {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    padding: 40px 10px;
+    overflow: auto;
+    background-color: white;
+    transform: none;
+  }
+}
+
+/* Sorting */
+@media (max-width: 767px) {
+  .dkLab-filters-wrapper {
+    position: relative;
+    z-index: 3;
+
+    .listSorting {
+      position: relative;
+    }
+  }
+
+  body.mobile.dklab-filters--new-sorting #content :not(#dkLabTopFilters) .dkLab-filters-wrapper .listSorting.dkLab-filters-wrapper__wrap .listSorting__controls,
+  body.mobile.dklab-filters--new-sorting #content-wrapper :not(#dkLabTopFilters) .dkLab-filters-wrapper .listSorting.dkLab-filters-wrapper__wrap .listSorting__controls {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    max-height: none;
+    border-radius: 17px;
+    background-color: #fff;
+
+    .listSorting__control--current::after {
+      content: none;
+    }
+  }
+
+  #content .filters-unveil-button-wrapper+.dkLab-filters-wrapper>.dkLab-filters-wrapper__button {
+    h4 {
+      border-radius: 17px;
+
+      &::after {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Sorting */

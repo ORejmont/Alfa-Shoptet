@@ -46,6 +46,10 @@
       width: calc(100% + 15px);
 
       .product {
+        &[aria-hidden=true] {
+          display: block;
+        }
+
         margin: 7.5px;
         @include abs.background;
         border-radius: abs.$border-radius;
