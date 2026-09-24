@@ -11,6 +11,14 @@
 }
 
 body.dklab-filters {
+  .top-navigation-bar {
+    z-index: 15;
+  }
+
+  #header {
+    z-index: 14;
+  }
+
   #content .filters-unveil-button-wrapper {
     // &.hide {
     //   display: none !important;
