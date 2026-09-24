@@ -124,7 +124,7 @@ body.dklab-filters .dkLab-filters-button__item--cancel:after {
   border-radius: 4px;
 }
 
-.dkLab-filters-wrapper h4:after {
+body .dkLab-filters-wrapper h4:after {
   content: '\f10f';
   font-family: 'alfa';
   font-size: 12px;
@@ -153,6 +153,18 @@ body.dklab-filters {
     overflow: auto;
     background-color: white;
     transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  body.dklab-filters #filters-wrapper .filters-wrapper {
+    transform: none;
+  }
+}
+
+.slider-wrapper.dkLab-filters-wrapper__wrap {
+  .slider-header {
+    display: none;
   }
 }
 
