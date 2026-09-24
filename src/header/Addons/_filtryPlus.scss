@@ -164,7 +164,7 @@ body.dklab-filters {
 
 .slider-wrapper.dkLab-filters-wrapper__wrap {
   .slider-header {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -172,7 +172,7 @@ body.dklab-filters {
 @media (max-width: 767px) {
   .dkLab-filters-wrapper {
     position: relative;
-    z-index: 3;
+    z-index: 12;
 
     .listSorting {
       position: relative;
