@@ -85,8 +85,8 @@ body.dklab-filters {
   }
 }
 
-html.dklab-filter-window-active .dkLab-filters-close-button:before,
-html.dklab-filter-window-active body .dkLab-filters-close-button:before {
+html.dklab-filter-window-active body.dklab-filters .dkLab-filters-close-button:before,
+html.dklab-filter-window-active body.dklab-filters .dkLab-filters-close-button:before {
   speak: none;
   display: inline-block;
   font-family: 'alfa';
@@ -106,8 +106,8 @@ html.dklab-filter-window-active body .dkLab-filters-close-button:before {
   transition: color 0.3s ease-in-out;
 }
 
-.dklab-filters .dkLab-filters-button--remove:before,
-.dklab-filters .dkLab-filters-button__item--cancel:after {
+body.dklab-filters .dkLab-filters-button--remove:before,
+body.dklab-filters .dkLab-filters-button__item--cancel:after {
   speak: none;
   display: inline-block;
   font-family: "alfa";
