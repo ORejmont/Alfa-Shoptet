@@ -1,6 +1,7 @@
 @use "../Abstracts" as abs;
 
-.top-navigation-tools--language {
+.top-navigation-tools--language,
+.top-navigation-tools {
   .dropdown {
     position: relative;
 
